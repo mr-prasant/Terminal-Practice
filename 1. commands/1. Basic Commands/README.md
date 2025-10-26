@@ -164,7 +164,7 @@ The `cd` command stands for **"change directory"**. It is used to navigate betwe
 cd [directory]
 ```
 
-`directory` : The path of the directory you want to move to. This can be an absolute path or a relative path.
+`[directory]` : The path of the directory you want to move to. This can be an absolute path or a relative path.
 
 | Feature / Example                | Description / Command                                                                 |
 |---------------------------------|--------------------------------------------------------------------------------------|
@@ -288,4 +288,128 @@ $ cd ../Downloads
 Result:
 ```bash
 # Moves one level up, then enters the 'Downloads' folder
+```
+
+---
+
+
+### 3. `mkdir` – Make Directory
+
+The `mkdir` command is used to **create new directories (folders)** in Linux/Ubuntu. It can create single or multiple directories, nested folders, and even set permissions while creating them.
+
+
+**Syntax:**
+```bash
+mkdir [options] directory_name
+```
+
+`[options]`: Modify the behavior (e.g., create parent directories)
+
+`directory_name`: Name or path of the directory to create
+
+| Feature / Example                | Description / Command                                                                 |
+|----------------------------------|----------------------------------------------------------------------------------------|
+| **Syntax**                       | `mkdir [options] directory_name` – Create a new directory or multiple directories      |
+| **Single Directory**             | `mkdir new_folder` – Creates a directory named `new_folder` in the current location    |
+| **Multiple Directories**         | `mkdir folder1 folder2 folder3` – Creates multiple directories at once                 |
+| **Parent Directories**           | `mkdir -p parent/child/grandchild` – Creates nested directories in one command         |
+| **Verbose Mode**                 | `mkdir -v myfolder` – Shows a message for each directory created                       |
+| **Directory with Spaces**        | `mkdir "My Folder"` – Use quotes when directory name contains spaces                   |
+| **Absolute Path**                | `mkdir /home/user/newfolder` – Creates a folder at the specified absolute path          |
+| **Relative Path**                | `mkdir ../backup` – Creates a folder in the parent directory                           |
+| **Permissions While Creating**   | `mkdir -m 755 secure_folder` – Creates a folder with specific permissions              |
+| **Check Directory Creation**     | `ls -l` – Verify the created directories in the current location                       |
+| **Tips**                         | Use `-p` to avoid errors if parent directories don’t exist                             |
+
+## Examples
+
+**3.1 Example for creating a single directory:**  
+Command:  
+```bash
+$ mkdir new_folder
+```
+Result:
+```bash
+# Creates a directory named 'new_folder' in the current location
+```
+
+**3.2 Example for creating multiple directories at once:**  
+Command:  
+```bash
+$ mkdir folder1 folder2 folder3
+```
+Result:
+```bash
+# Creates three directories named 'folder1', 'folder2', and 'folder3' in the current location
+```
+
+**3.3 Example for creating parent and nested directories:**  
+Command:  
+```bash
+$ mkdir -p parent/child/grandchild
+```
+Result:
+```bash
+# Creates 'parent', 'child', and 'grandchild' directories in a nested structure
+```
+
+**3.4 Example for verbose mode while creating a directory:**  
+Command:  
+```bash
+$ mkdir -v myfolder
+```
+Result:
+```bash
+mkdir: created directory 'myfolder'
+# Displays a confirmation message when a directory is created
+```
+
+**3.5 Example for creating a directory with spaces in its name:**  
+Command:  
+```bash
+$ mkdir "My Folder"
+```
+Result:
+```bash
+# Creates a directory named 'My Folder'
+```
+
+**3.6 Example for creating a directory using an absolute path:**  
+Command:  
+```bash
+$ mkdir /home/user/newfolder
+```
+Result:
+```bash
+# Creates 'newfolder' inside the '/home/user' directory
+```
+
+**3.7 Example for creating a directory using a relative path:**  
+Command:  
+```bash
+$ mkdir ../backup
+```
+Result:
+```bash
+# Creates a directory named 'backup' one level up from the current directory
+```
+
+**3.8 Example for creating a directory with specific permissions:**  
+Command:  
+```bash
+$ mkdir -m 755 secure_folder
+```
+Result:
+```bash
+# Creates 'secure_folder' with read, write, and execute permissions for owner, and read and execute for others
+```
+
+**3.9 Example tip for avoiding parent directory errors::**  
+Command:  
+```bash
+$ mkdir -p project/src/components
+```
+Result:
+```bash
+# Creates all required parent folders automatically if they don’t exist
 ```
