@@ -153,3 +153,139 @@ Practice in different directories to understand file structure.
 Use `tab completion` to save time when typing file or directory names.
 
 ---
+
+### 2. `cd` – Change Directory
+
+The `cd` command stands for **"change directory"**. It is used to navigate between directories in the Linux/Ubuntu terminal.
+
+
+**Syntax:**
+```bash
+cd [directory]
+```
+
+`directory` : The path of the directory you want to move to. This can be an absolute path or a relative path.
+
+| Feature / Example                | Description / Command                                                                 |
+|---------------------------------|--------------------------------------------------------------------------------------|
+| **Syntax**                       | `cd [directory]` – Change to the specified directory (absolute or relative path)     |
+| **Absolute Path**                | `cd /home/user/Documents` – Moves to the `Documents` directory                        |
+| **Relative Path**                | `cd Documents` – Moves to `Documents` inside the current directory                    |
+| **Parent Directory**             | `cd ..` – Moves one level up in the directory hierarchy                               |
+| **Home Directory**               | `cd ~` or `cd` – Moves to the user's home directory                                   |
+| **Previous Directory**           | `cd -` – Moves back to the directory you were in previously                           |
+| **Directory with Spaces**        | `cd "My Folder"` – Use quotes when the directory name contains spaces                 |
+| **Check Current Directory**      | `pwd` – Prints the current working directory                                          |
+| **Tips**                         | Tab completion can be used to automatically complete directory names                 |
+
+### Examples
+
+**2.1 Example for moving to an absolute path:**
+Command:
+```bash
+$ cd /home/user/Documents
+```
+
+Result:
+```bash
+# Moves directly to the Documents folder inside /home/user
+```
+
+**2.2 Example for moving to a relative path:**
+Command:
+```bash
+$ cd Documents
+```
+
+Result:
+```bash
+# Moves into the Documents folder inside the current directory
+```
+
+**2.3 Example for moving to the parent directory:**
+Command:
+```bash
+$ cd ..
+```
+
+Result:
+```bash
+# Moves one level up in the directory hierarchy
+```
+
+**2.4 Example for moving to the home directory:**
+Command:
+```bash
+$ cd ~
+```
+
+Result:
+```bash
+# Takes you to the user's home directory
+```
+
+**2.5 Example for moving to the home directory (alternative):**
+Command:
+```bash
+$ cd
+```
+
+Result:
+```bash
+# Takes you to the user's home directory
+```
+
+**2.6 Example for moving to the previous directory:**
+Command:
+```bash
+$ cd -
+```
+
+Result:
+```bash
+# Returns to the directory you were in just before the current one
+
+**2.7 Example for a directory with spaces in the name:**
+Command:
+```bash
+$ cd "My Folder"
+```
+
+Result:
+```bash
+# Moves into a folder named 'My Folder' inside the current directory
+```
+
+**2.8 Example for checking the current directory:**
+Command:
+```bash
+$ pwd
+```
+
+Result:
+```bash
+/home/user/Documents
+# Prints the full path of the current working directory
+```
+
+**2.9 Example for navigating to a nested folder structure:**
+Command:
+```bash
+$ cd /home/user/Documents/Projects/Code
+```
+
+Result:
+```bash
+# Moves directly into the nested 'Projects/Code' folder
+```
+
+**2.10 Example for going up one level and then entering another folder:**
+Command:
+```bash
+$ cd ../Downloads
+```
+
+Result:
+```bash
+# Moves one level up, then enters the 'Downloads' folder
+```
