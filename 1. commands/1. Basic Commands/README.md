@@ -321,7 +321,7 @@ mkdir [options] directory_name
 | **Check Directory Creation**     | `ls -l` – Verify the created directories in the current location                       |
 | **Tips**                         | Use `-p` to avoid errors if parent directories don’t exist                             |
 
-## Examples
+### Examples
 
 **3.1 Example for creating a single directory:**  
 Command:  
@@ -413,3 +413,104 @@ Result:
 ```bash
 # Creates all required parent folders automatically if they don’t exist
 ```
+
+---
+
+
+### 4. `rm` – Remove
+
+The `rm` (remove) command is used to **delete files and directories** from the file system in Linux or Ubuntu. Once removed, files **cannot be recovered** through normal means — **so use it with caution**.
+
+**Syntax:**
+```bash
+rm [OPTION]... FILE...
+```
+
+`OPTION`: Modifies how `rm` behaves (e.g., force delete, recursive delete).
+
+`FILE`: Name(s) of the file(s) or directory(ies) you want to delete.
+
+| Option | Description | Example |
+|:-------:|:-------------|:---------|
+| `-f` | Force deletion **without asking for confirmation**, even if the file is write-protected. | `rm -f file1.txt` |
+| `-i` | Prompts for confirmation **before deleting** each file. | `rm -i file1.txt` |
+| `-r` | Recursively remove **directories and their contents**. | `rm -r folder1` |
+| `-rf` or `-fr` | Combine both — **recursively** delete directories and their contents **without confirmation**. | `rm -rf folder1` |
+| `-v` | **Verbose** mode — shows which files are being deleted. | `rm -v file1.txt` |
+
+### Examples
+
+**4.1 Example for removing a single file:**  
+Command:  
+```bash
+$ rm file1.txt
+```
+Result:
+```bash
+# Deletes the file named 'file1.txt' from the current directory.
+```
+
+
+**4.2 Example for removing multiple files at once:**  
+Command:  
+```bash
+$ rm file1.txt file2.txt file3.txt
+```
+Result:
+```bash
+# Deletes file1.txt, file2.txt, and file3.txt together.
+```
+
+**4.3 Example for removing a directory and its contents:**  
+Command:  
+```bash
+$ rm -r myFolder
+```
+Result:
+```bash
+# Removes 'myFolder' and everything inside it recursively.
+```
+
+**4.4 Example for force delete a folder (without confirmation):**  
+Command:  
+```bash
+$ rm -rf old_backups/
+```
+Result:
+```bash
+# Deletes the 'old_backups' folder and all files inside it without asking.
+# Be careful – this action cannot be undone.
+```
+
+**4.5 Example for removing files interactively:**  
+Command:  
+```bash
+$ rm -i *.log
+```
+Result:
+```bash
+rm: remove regular file 'error.log'? y
+rm: remove regular file 'access.log'? n
+# Deletes only the files you confirm with 'y'.
+```
+
+**4.6 Example for verbose deletion (see what’s being deleted):**  
+Command:  
+```bash
+$ rm -v file1.txt file2.txt
+```
+Result:
+```bash
+removed 'file1.txt'
+removed 'file2.txt'
+```
+
+**Tip**
+If you want to move a file to a "trash" instead of permanent deletion, you can use:
+
+```bash
+$ gio trash filename
+```
+
+This sends the file to the system trash instead of removing it permanently.
+
